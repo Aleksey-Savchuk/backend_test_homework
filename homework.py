@@ -8,7 +8,7 @@ class InfoMessage:
         distance: float,
         speed: float,
         calories: float
-    ):
+    ) -> None:
         self.training_type = training_type
         self.duration = duration
         self.distance = distance
@@ -83,7 +83,7 @@ class SportsWalking(Training):
 
     def __init__(
                 self,
-                action: float,
+                action: int,
                 duration: float,
                 weight: float,
                 height: float
@@ -106,7 +106,7 @@ class Swimming(Training):
 
     def __init__(
         self,
-        action: float,
+        action: int,
         duration: float,
         weight: float,
         length_pool: float,
@@ -131,7 +131,7 @@ def read_package(workout_type: str, data: list) -> Training:
     if workout_type in code_training.keys():
         return code_training[workout_type](*data)
     else:
-        return "Не известный вид тренировки"
+        return ""
 
 
 def main(training: Training) -> None:
