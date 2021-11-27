@@ -1,2 +1,0 @@
-print('Я домашка'
-cvvbcvbcvb
